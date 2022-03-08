@@ -27,25 +27,53 @@
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-        <h1>About Us</h1>
+        <h1>Contact Us</h1>
 
     </section>
 
-    <!----About us Content-->
+    <!----Contact us-->
 
-    <section class="about-us">
-        <div class="row">
-            <div class="about-col">
-                <h1>We are the World's largest University</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quos sint ut quia. Ratione eos incidunt natus cupiditate tempora consectetur vel error. 
-                    Quo a id vitae quae. Sapiente, necessitatibus vero?</p>
-                <a href="" class="hero-btn red-btn">EXPLORE NOW</a>
-            </div>
-            <div class="about-col">
-               <img src="images/about.jpg">
-            </div>
-        </div>
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15234.990782077095!2d78.577664!3d17.3277184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1646747757659!5m2!1sen!2sin" width="600" height="450" style="border:0;" 
+        allowfullscreen="" loading="lazy"></iframe>
     </section>
+
+   <section class="contact-us">
+       <div class="row">
+           <div class="contact-col">
+               <div>
+                   <i class="fa fa-home"></i>
+                   <span>
+                       <h5>XYZ Road ABC Building</h5>
+                       <p>Bangalore,Karnataka,IN</p>
+                   </span>
+               </div>
+               <div>
+                <i class="fa fa-phone"></i>
+                <span>
+                    <h5>+1 145856995</h5>
+                    <p>Monday To Saturday,10AM to 6PM</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <span>
+                    <h5>info@Labeitazer.com</h5>
+                    <p>Email Us Your Query</p>
+                </span>
+            </div>
+           </div>
+           <div class="contact-col">
+               <form action="formhandler.php" method="post">
+                    <input type="text" name ="name" placeholder="Enter Your Name" required>
+                    <input type="email" name ="email" placeholder="Enter Your Email" required>
+                    <input type="text" name="subject" placeholder="Enter Your Subject" required>
+                    <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                    <button type="submit" class="hero-btn red-btn">Send Message</button>
+               </form>
+           </div>
+       </div>
+   </section>
   
 
     <!-----footer-->
