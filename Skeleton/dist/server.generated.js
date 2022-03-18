@@ -123,6 +123,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 
 /***/ }),
 
+/***/ "./server/devBundle.js":
+/*!*****************************!*\
+  !*** ./server/devBundle.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var webpack__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! webpack */ \"webpack\");\n/* harmony import */ var webpack__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(webpack__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var webpack_dev_middleware__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! webpack-dev-middleware */ \"webpack-dev-middleware\");\n/* harmony import */ var webpack_dev_middleware__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(webpack_dev_middleware__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var webpack_hot_middleware__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! webpack-hot-middleware */ \"webpack-hot-middleware\");\n/* harmony import */ var webpack_hot_middleware__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(webpack_hot_middleware__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _config_config_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../config/config.js */ \"./config/config.js\");\n/* harmony import */ var _webpack_config_client_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../webpack.config.client.js */ \"./webpack.config.client.js\");\n/* harmony import */ var _webpack_config_client_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_webpack_config_client_js__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\r\n function compile(app){\r\n    if(_config_config_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"].env === \"development\"){\r\n        const compiler = webpack__WEBPACK_IMPORTED_MODULE_0___default()(_webpack_config_client_js__WEBPACK_IMPORTED_MODULE_4___default.a);\r\n        const middleware = webpack_dev_middleware__WEBPACK_IMPORTED_MODULE_1___default()(compiler,{\r\n            publicPath:_webpack_config_client_js__WEBPACK_IMPORTED_MODULE_4___default.a.output.publicPath\r\n        })\r\n        app.use(middleware);\r\n        app.use(webpack_hot_middleware__WEBPACK_IMPORTED_MODULE_2___default.a)\r\n    }\r\n}\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({compile});\n\n//# sourceURL=webpack:///./server/devBundle.js?");
+
+/***/ }),
+
 /***/ "./server/express.js":
 /*!***************************!*\
   !*** ./server/express.js ***!
@@ -131,7 +143,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var body_parser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! body-parser */ \"body-parser\");\n/* harmony import */ var body_parser__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(body_parser__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var cookie_parser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cookie-parser */ \"cookie-parser\");\n/* harmony import */ var cookie_parser__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cookie_parser__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var compression__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! compression */ \"compression\");\n/* harmony import */ var compression__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(compression__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var cors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! cors */ \"cors\");\n/* harmony import */ var cors__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(cors__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var helmet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! helmet */ \"helmet\");\n/* harmony import */ var helmet__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(helmet__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../template */ \"./template.js\");\n/* harmony import */ var _routes_user_routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./routes/user.routes */ \"./server/routes/user.routes.js\");\n/* harmony import */ var _routes_auth_routes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./routes/auth.routes */ \"./server/routes/auth.routes.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst app = express__WEBPACK_IMPORTED_MODULE_0___default()();\r\napp.use(body_parser__WEBPACK_IMPORTED_MODULE_1___default.a.json())\r\napp.use(body_parser__WEBPACK_IMPORTED_MODULE_1___default.a.urlencoded({extended:true}));\r\napp.use(cookie_parser__WEBPACK_IMPORTED_MODULE_2___default()());\r\napp.use(compression__WEBPACK_IMPORTED_MODULE_3___default()());\r\napp.use(helmet__WEBPACK_IMPORTED_MODULE_5___default()());\r\napp.use(cors__WEBPACK_IMPORTED_MODULE_4___default()());\r\napp.get('/',(req,res)=>{\r\n    res.status(200).send(Object(_template__WEBPACK_IMPORTED_MODULE_6__[\"default\"])());\r\n})\r\napp.use('/',_routes_user_routes__WEBPACK_IMPORTED_MODULE_7__[\"default\"]);\r\napp.use('/',_routes_auth_routes__WEBPACK_IMPORTED_MODULE_8__[\"default\"]);\r\napp.use((err,req,res,next)=>{\r\n    if(err.name==='UnauthorizedError'){\r\n        res.status(401).json({\"error\":err.name + \": \" + err.message})\r\n    }\r\n    else if(err){\r\n        res.status(400).json({\"error\":err.name + \": \"+err.message})\r\n        console.log(err)\r\n    }\r\n})\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./server/express.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var body_parser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! body-parser */ \"body-parser\");\n/* harmony import */ var body_parser__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(body_parser__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var cookie_parser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! cookie-parser */ \"cookie-parser\");\n/* harmony import */ var cookie_parser__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cookie_parser__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var compression__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! compression */ \"compression\");\n/* harmony import */ var compression__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(compression__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var cors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! cors */ \"cors\");\n/* harmony import */ var cors__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(cors__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var helmet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! helmet */ \"helmet\");\n/* harmony import */ var helmet__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(helmet__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../template */ \"./template.js\");\n/* harmony import */ var _routes_user_routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./routes/user.routes */ \"./server/routes/user.routes.js\");\n/* harmony import */ var _routes_auth_routes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./routes/auth.routes */ \"./server/routes/auth.routes.js\");\n/* harmony import */ var _devBundle__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./devBundle */ \"./server/devBundle.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst app = express__WEBPACK_IMPORTED_MODULE_0___default()();\r\n\r\n_devBundle__WEBPACK_IMPORTED_MODULE_9__[\"default\"].compile(app);\r\n\r\n\r\n\r\napp.use(body_parser__WEBPACK_IMPORTED_MODULE_1___default.a.json())\r\napp.use(body_parser__WEBPACK_IMPORTED_MODULE_1___default.a.urlencoded({extended:true}));\r\napp.use(cookie_parser__WEBPACK_IMPORTED_MODULE_2___default()());\r\napp.use(compression__WEBPACK_IMPORTED_MODULE_3___default()());\r\napp.use(helmet__WEBPACK_IMPORTED_MODULE_5___default()());\r\napp.use(cors__WEBPACK_IMPORTED_MODULE_4___default()());\r\napp.get('/',(req,res)=>{\r\n    res.status(200).send(Object(_template__WEBPACK_IMPORTED_MODULE_6__[\"default\"])());\r\n})\r\n\r\n\r\n\r\napp.use('/',_routes_user_routes__WEBPACK_IMPORTED_MODULE_7__[\"default\"]);\r\napp.use('/',_routes_auth_routes__WEBPACK_IMPORTED_MODULE_8__[\"default\"]);\r\napp.use((err,req,res,next)=>{\r\n    if(err.name==='UnauthorizedError'){\r\n        res.status(401).json({\"error\":err.name + \": \" + err.message})\r\n    }\r\n    else if(err){\r\n        res.status(400).json({\"error\":err.name + \": \"+err.message})\r\n        console.log(err)\r\n    }\r\n})\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./server/express.js?");
 
 /***/ }),
 
@@ -204,6 +216,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _con
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (()=>{\r\n    return `<!doctype html>\r\n    <html lang=\"en\">\r\n    <head>\r\n    <meta charset=\"utf-8\">\r\n    <title>MERN Skeleton </title>\r\n    </head>\r\n    <body>\r\n    <div id=\"root\">Hello World</div>\r\n    </body>\r\n    </html>`\r\n});\n\n//# sourceURL=webpack:///./template.js?");
+
+/***/ }),
+
+/***/ "./webpack.config.client.js":
+/*!**********************************!*\
+  !*** ./webpack.config.client.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const path = __webpack_require__(/*! path */ \"path\")\r\nconst webpack = __webpack_require__(/*! webpack */ \"webpack\")\r\nconst CURRENT_WORKING_DIR = process.cwd()\r\n\r\nconst config = {\r\n    name: \"browser\",\r\n    mode: \"development\",\r\n    devtool: 'eval-source-map',\r\n    entry: [\r\n        'webpack-hot-middleware/client?reload=true',\r\n        path.join(CURRENT_WORKING_DIR, 'client/main.js')\r\n    ],\r\n    output: {\r\n        path: path.join(CURRENT_WORKING_DIR , '/dist'),\r\n        filename: 'bundle.js',\r\n        publicPath: '/dist/'\r\n    },\r\n    module: {\r\n        rules: [\r\n            {\r\n                test: /\\.jsx?$/,\r\n                exclude: /node_modules/,\r\n                use: [\r\n                    'babel-loader'\r\n                ]\r\n            },\r\n            {\r\n                test: /\\.(ttf|eot|svg|gif|jpg|png)(\\?[\\s\\S]+)?$/,\r\n                use: 'file-loader'\r\n            }\r\n        ]\r\n    },  \r\n    plugins: [\r\n          new webpack.HotModuleReplacementPlugin(),\r\n          new webpack.NoEmitOnErrorsPlugin()\r\n    ],\r\n    resolve: {\r\n        alias: {\r\n        //   'react-dom': '@hot-loader/react-dom'\r\n        }\r\n    }\r\n}\r\n\r\nmodule.exports = config\n\n//# sourceURL=webpack:///./webpack.config.client.js?");
 
 /***/ }),
 
@@ -336,6 +359,50 @@ eval("module.exports = require(\"lodash\");\n\n//# sourceURL=webpack:///external
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"mongoose\");\n\n//# sourceURL=webpack:///external_%22mongoose%22?");
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"path\");\n\n//# sourceURL=webpack:///external_%22path%22?");
+
+/***/ }),
+
+/***/ "webpack":
+/*!**************************!*\
+  !*** external "webpack" ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"webpack\");\n\n//# sourceURL=webpack:///external_%22webpack%22?");
+
+/***/ }),
+
+/***/ "webpack-dev-middleware":
+/*!*****************************************!*\
+  !*** external "webpack-dev-middleware" ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"webpack-dev-middleware\");\n\n//# sourceURL=webpack:///external_%22webpack-dev-middleware%22?");
+
+/***/ }),
+
+/***/ "webpack-hot-middleware":
+/*!*****************************************!*\
+  !*** external "webpack-hot-middleware" ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"webpack-hot-middleware\");\n\n//# sourceURL=webpack:///external_%22webpack-hot-middleware%22?");
 
 /***/ })
 
