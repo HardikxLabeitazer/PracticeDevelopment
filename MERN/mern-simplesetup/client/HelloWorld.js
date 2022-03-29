@@ -1,11 +1,11 @@
 import React from 'react';
 import {hot} from 'react-hot-loader';
 
-const HelloWorld = ()=>{
+const Easyhello = ()=>{
     return(
         <div>
             <h1>HelloWorld!</h1>
         </div>
     )
 }
-export default hot(module)(HelloWorld);
+export default hot(module)(Easyhello);
