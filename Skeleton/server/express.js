@@ -13,5 +13,8 @@ app.use(cookieParser());
 app.use(compress());
 app.use(helmet());
 app.use(cors());
-
+// app.get('/',(req,res)=>{
+//     res.status(200).send(Template());
+// })
+app.use('/',userRoutes);
 export default app;

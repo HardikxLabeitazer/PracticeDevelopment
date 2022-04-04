@@ -1,6 +1,6 @@
 import mongoose  from "mongoose";
 
-const UserSchema = new mongoose.Schmema({
+const UserSchema = new mongoose.Schema({
     name:{
         type:String,
         trim:true,
@@ -10,7 +10,7 @@ const UserSchema = new mongoose.Schmema({
         type:String,
         trim:true,
         unique:'Email already exists',
-        match:[/.+\@.+\..+/,'Please fill a valid email address'],
+        match:['/.+\@.+\..+/','Please fill a valid email address'],
         required:'Email is required'
     },
     created:{
