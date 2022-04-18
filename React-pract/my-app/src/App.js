@@ -1,18 +1,17 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Navbar from './Navbar';
+import TextForm from './TextForm';
 
-let name ="Natsuki";
+
 function App() {
   return (
    <>
-   <nav>
-     <ul>
-       <li>Home</li>
-       <li>About</li>
-       <li>Contact</li>
-     </ul>
-   </nav>
-   <div><h1>Hello {name}</h1></div>
+    <Navbar title="TextUtils" aboutText ="About"></Navbar>
+    <div className="container my-3">
+      <TextForm heading="Enter the Text to analyze"/>
+    </div>
+    
    </>
   );
 }
