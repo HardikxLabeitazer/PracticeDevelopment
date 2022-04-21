@@ -76,7 +76,7 @@ export default function TextForm(props) {
             <button className="btn btn-primary mx-2 my-1" onClick={handleExtraspaces}>Extra White Spaces</button>
             <button className="btn btn-primary mx-2 my-1" onClick={handleClearText}>Clear Text</button>
         </div>
-        <div className='container my-3 mx-2' style={{color:props.mode === 'dark'?'white':'dark'}} >
+        <div className='container my-3 mx-2' style={{color:props.mode === 'dark'?'white':'black'}} >
             <h1>Your Text Summary</h1>
             <p>{text.split(" ").length} words and {text.length} characters</p>
             <p>{0.008 * text.split(" ").length} Minutes read</p>
