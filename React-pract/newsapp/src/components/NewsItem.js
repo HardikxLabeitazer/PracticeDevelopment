@@ -68,12 +68,12 @@ export class NewsItem extends Component {
     let {title,description,imageurl,newsurl}= this.props;
     return (
       <div className='my-3'>
-        <div classNameName="card" style={{width:'18rem'}}>
+        <div className="card" >
           <img src={imageurl?imageurl:"https://images.hindustantimes.com/img/2022/04/26/550x309/WhatsApp_Image_2021-09-18_at_09.42.18_1631944439782_1650931438960.jpeg"} className="card-img-top" alt="..."/>
             <div className="card-body">
               <h5 className="card-title">{title}</h5>
               <p className="card-text">{description}</p>
-              <a href={newsurl}  className="btn btn-sm btn-primary">Read More</a>     {/* target="_blank" */}
+              <a rel="noreferrer" href={newsurl}  className="btn btn-sm btn-primary">Read More</a>     {/* target="_blank" */}
             </div>
         </div>
                                               
