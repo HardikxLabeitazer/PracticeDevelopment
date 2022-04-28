@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class NewsItem extends Component {
+const NewsItem=(props)=>  {
 //   articles= [
 //     {
 //         "source": {
@@ -64,22 +64,27 @@ export class NewsItem extends Component {
 //     }
 
 
-  render() {
-    let {title,description,imageurl,newsurl}= this.props;
+  
+    let {title,description,imageurl,newsurl,author,date,source}= props;
     return (
       <div className='my-3'>
         <div className="card" >
+        <div style={{display:'flex',justifyContent:'flex-end',position:'absolute',right:'0'}}>
+           <span className=" badge rounded-pill bg-danger" >{source}</span>
+        </div>
+       
           <img src={imageurl?imageurl:"https://images.hindustantimes.com/img/2022/04/26/550x309/WhatsApp_Image_2021-09-18_at_09.42.18_1631944439782_1650931438960.jpeg"} className="card-img-top" alt="..."/>
             <div className="card-body">
               <h5 className="card-title">{title}</h5>
               <p className="card-text">{description}</p>
+              <p className="card-text"><small className="text-muted">By {!author?"Unknown":author} on {new Date(date).toGMTString()}</small></p>
               <a rel="noreferrer" href={newsurl}  className="btn btn-sm btn-primary">Read More</a>     {/* target="_blank" */}
             </div>
         </div>
                                               
       </div>                                   
     )
-  }
+  
 }
 
 export default NewsItem
