@@ -10,13 +10,9 @@ const NoteItem = (props) => {
                
                     <div className="card-body">
                         <h5 className="card-title">{note.title}</h5>
-                        <p className="card-text">{note.description}whatishte msjjlejrijladjlfjljsdjfljalsjdsfljalsjdfl
-                        jaldjfljsldjflsjljfddjlj jljsdkfjiuoerejojre
-                        lskdjfljljoiu joiwuoeuro hsahljlpup putjljelr peope
-                        jaljjsj kaeuji ieiklll lskdjfljljoiu joiwuoeuro hsahljlpup putjljelr peope
-                        jaljjsj kaeuji ieiklll
-                         zerejljljl jjjljljlj </p>
-                        
+                        <p className="card-text">{note.description}</p>
+                        <i className="fa-solid fa-trash-alt mx-2"></i>
+                        <i className="fa-solid fa-pen-to-square mx-2"></i>
                     </div>
             </div>
         </div>
