@@ -1,11 +1,12 @@
 import React,{useState} from 'react'
-
+import { useColors } from '../../useColor';
 export default function WithoutUsingref({OnNewColor=f=>f}) {
   const [title, setTitle] = useState("");
   const [color,setColor]=useState("#000000");
+  const {addColor}=useColors();
   const submit =e=>{
     e.preventDefault();
-    OnNewColor(title,color);
+    addColor(title,color);
     setTitle("");
     setColor("");
   }
