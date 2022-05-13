@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
-import { useColors } from '../../useColor';
-export default function WithoutUsingref({OnNewColor=f=>f}) {
+import { useColors } from "../context/color-hooks"
+export default function WithoutUsingref() {
   const [title, setTitle] = useState("");
   const [color,setColor]=useState("#000000");
+  const [rating,setRating]=useState(0);
   const {addColor}=useColors();
   const submit =e=>{
     e.preventDefault();
-    addColor(title,color);
+    addColor(title,color,rating);
     setTitle("");
     setColor("");
   }
@@ -20,7 +21,12 @@ export default function WithoutUsingref({OnNewColor=f=>f}) {
         placeholder='color title..'
         required
         />
-
+        <input
+        value={rating}
+        onChange={event=>setRating(event.target.value)}
+        type="text"
+        required
+        />
         <input
         value={color}
         onChange={event=>setColor(event.target.value)}
