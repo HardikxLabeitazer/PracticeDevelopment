@@ -1,14 +1,35 @@
 const express = require("express")
 const path = require('path')
 const fs = require("fs")
+const apiRouter = require("api-router");
+const app = express();
 
-const app = express()
+let staticpath = path.resolve(__dirname,"static");
 
-app.use((req,res,next)=>{
-    console.log("Request IP: "+ req.url);
-    console.log("Request date: "+new Date());
-    next();
-});
+
+app.use(express.static(staticpath));
+app.use("/api",apiRouter);
+app.listen(3000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// app.use((req,res,next)=>{
+//     console.log("Request IP: "+ req.url);
+//     console.log("Request date: "+new Date());
+//     next();
+// });
 // app.use((req,res,next)=>{
 //     let filepath = path.join(__dirname,"static",req.url);
 //     fs.stat(filepath,(err,fileinfo)=>{
@@ -25,12 +46,12 @@ app.use((req,res,next)=>{
 //     })
 // })
 //2nd method
-let staticpath = path.join(__dirname,"static");
-app.use(express.static(staticpath));
-app.use((req,res)=>{
-    res.status(404);
-    res.send("File not found!");
-})
+// let staticpath = path.join(__dirname,"static");
+// app.use(express.static(staticpath));
+// app.use((req,res)=>{
+//     res.status(404);
+//     res.send("File not found!");
+// })
 
 app.listen(3001,()=>{
     console.log("App started on port 3001");

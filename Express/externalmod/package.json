@@ -1,11 +1,11 @@
 {
-    "name": "static-file-fun",
+    "name": "random-number-api",
     "private": true,
     "scripts": {
-        "start": "node app.js"
+        "start": "node app"
     },
     "dependencies": {
-        "api-router": "^0.1.10",
+        "ejs": "^3.1.8",
         "express": "^4.18.1"
     }
 }
