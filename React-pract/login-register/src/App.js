@@ -6,7 +6,10 @@ import Register from './components/register/Register';
 import { BrowserRouter } from 'react-router-dom';
 import { Route } from 'react-router';
 import { Routes } from 'react-router';
+import { useState } from 'react';
 function App() {
+
+  const[user,setLoginUser]=useState({});
   return (
     <div className="App">
      
@@ -17,9 +20,10 @@ function App() {
      <BrowserRouter>
 
      <Routes>
-       <Route exact path="/" element={<HomePage/>}/>
-       <Route exact path="/" element={<Login/>}/>
-       <Route exact path="/" element={<Register/> }/>
+
+       <Route exact path="/" element={user && user._id?<HomePage setLoginUser={setLoginUser}/>:<Login setLoginUser={setLoginUser}/>}></Route>
+       <Route exact path="/login" element={<Login setLoginUser={setLoginUser}/>}/>
+       <Route exact path="/register" element={<Register/> }/>
      </Routes>
      </BrowserRouter>
 
