@@ -41,6 +41,10 @@ export default function Home() {
            <h1>How to learn javascript in 2022</h1>
            <p>javascript is the language to design logic for the web</p>
          </div>
+         <div className='blogitem'>
+           <h1>How to learn javascript in 2022</h1>
+           <p>javascript is the language to design logic for the web</p>
+         </div>
          
        </div>
      
