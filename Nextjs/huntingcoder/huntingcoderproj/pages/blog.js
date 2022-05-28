@@ -1,7 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-const Blog = () => {
-  
+import * as fs from 'fs'
+const Blog = (props) => {
+  const [blogs, setBlogs] = useState(props.allBlogs)
+  // useEffect(() => {
+    
+  //   fetch('http://localhost:3000/api/blogs').then((a) => {
+  //     return a.json()
+  //   })
+  //     .then((data) => {
+
+       
+  //       setBlogs(data);
+  //     })
+  // }, [])
+
+
   return (
     <div>
       <style jsx>
@@ -24,24 +38,19 @@ const Blog = () => {
         `}
       </style>
       <div className='blogs'>
+        {
+          blogs.map((blogitem) => {
 
-        <div className='blogitem'>
-          <Link href={'/blogpost/learn-javascript'}>
-          <h2>How to learn javascript in 2022</h2></Link>
-          <p>javascript is the language to design logic for the web</p>
-        </div>
-        <div className='blogitem'>
-          <h2>How to learn javascript in 2022</h2>
-          <p>javascript is the language to design logic for the web</p>
-        </div>
-        <div className='blogitem'>
-          <h2>How to learn javascript in 2022</h2>
-          <p>javascript is the language to design logic for the web</p>
-        </div>
-        <div className='blogitem'>
-          <h2>How to learn javascript in 2022</h2>
-          <p>javascript is the language to design logic for the web</p>
-        </div>
+            return <div className='blogitem' key={blogitem.slug}>
+              <Link href={`/blogpost/${blogitem.slug}`}>
+                <h2>{blogitem.title}</h2></Link>
+              <p>{blogitem.metadsc.substr(0,200)}</p>
+            </div>
+          })
+        }
+
+
+      
 
       </div>
 
@@ -50,4 +59,41 @@ const Blog = () => {
   )
 }
 
+// export async function getServerSideProps(context){
+//   let data = await fetch('http://localhost:3000/api/blogs')
+//   let allBlogs = await data.json();
+
+    
+//   return {
+//     props:{allBlogs},
+//   }
+// }
+export async function getStaticProps(context){
+  let data = await fs.promises.readdir("blogdata");
+
+  let myfile;
+  let allBlogs =[];
+  for(let index = 0;index<data.length;index++){
+    const item = data[index];
+   
+    
+    myfile = await fs.promises.readFile(('blogdata/'+ item),'utf-8');
+    
+    allBlogs.push(JSON.parse(myfile));
+  }
+
+    
+  return {
+    props:{allBlogs},
+  }
+}
+
+// export async function getStaticPaths(){
+//   return {
+//     paths:[
+//       {params:{}}
+//     ],
+//     fallback:true
+//   }
+// }
 export default Blog
