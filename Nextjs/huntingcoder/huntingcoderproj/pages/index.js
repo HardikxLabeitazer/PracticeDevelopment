@@ -10,14 +10,17 @@ export default function Home() {
         {
           `
             .myimg{
-              border-radius:5px;
+              border-radius:92px;
               margin-Top:25px;
+              max-width:175px;
+              
             }
-            main>h1{
-              font-size:40px;
-            }
+           .myh1{
+             font-size:45px;
+             font-weight:500;
+           }
             h1{
-              font-size:25px;
+              font-size:20px;
             }
 
             `
@@ -33,20 +36,22 @@ export default function Home() {
 
       <main className={styles.main}>
 
-        <h1 className={styles.title}>
+        <h1 className='myh1'>
           Hunting Coder
         </h1>
         <img src="/bike.jpg" className='myimg' alt="" width={237} height={158} />
-        <h1>Latest Blogs</h1>
+       
         <p className={styles.description}>
-          <span className='myspan'>
-            A hunting blog for coders by a coder
-          </span>
-
+          
+        <h1 className={styles.title}>Latest Blogs</h1>
           {/* <h1>Popular Blogs</h1> */}
         </p>
-
-        <div className='blogs'>
+        <span className={styles.description}>
+                    A hunting blog for coders by a coderdjlfjljdlf
+                    aldjfljdljfjdf ljladfljdjfljdlf ljljdljfljdlfjldkjf
+                    jdlfjjdfljdlfj
+                  </span>
+        <div className={styles.blog}>
 
           <div className='blogitem'>
 

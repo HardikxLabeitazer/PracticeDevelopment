@@ -42,7 +42,8 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .title,
@@ -53,7 +54,9 @@
 .description {
   
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  max-width:40vw;
+  padding:20px;
 }
 
 .code {
@@ -128,4 +131,16 @@
   padding:20px;
   font-weight: 600;
   font-size: larger;
+}
+
+.blog{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  
+}
+.blog h1{
+  font-weight: 600;
 }
