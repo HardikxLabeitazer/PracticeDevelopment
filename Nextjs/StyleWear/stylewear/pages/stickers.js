@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-const Mugs = () => {
+const Stickers = () => {
   return (
 
 
@@ -13,7 +13,7 @@ const Mugs = () => {
           <div className="flex flex-wrap -m-4">
             <Link href="product/newstyle"><div className="lg:w-1/4 md:w-1/3 p-4 w-full cursor-pointer shadow-lg">
               <a className="block relative  rounded overflow-hidden">
-                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/71djjJCF8PL._SL1364_.jpg" />
+                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/613vgWVbpbL._SL1024_.jpg" />
               </a>
               <div className="mt-4 text-center md:text-left">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -25,7 +25,7 @@ const Mugs = () => {
             </div></Link>
             <Link href="product/newstyle"><div className="lg:w-1/4 md:w-1/3 p-4 w-full cursor-pointer shadow-lg">
               <a className="block relative  rounded overflow-hidden">
-                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/71djjJCF8PL._SL1364_.jpg" />
+                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/613vgWVbpbL._SL1024_.jpg" />
               </a>
               <div className="mt-4 text-center">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -38,7 +38,7 @@ const Mugs = () => {
             </div></Link>
             <Link href="product/newstyle"><div className="lg:w-1/4 md:w-1/3 p-4 w-full cursor-pointer shadow-lg">
               <a className="block relative  rounded overflow-hidden">
-                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/71djjJCF8PL._SL1364_.jpg" />
+                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/613vgWVbpbL._SL1024_.jpg" />
               </a>
               <div className="mt-4 text-center">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -50,7 +50,7 @@ const Mugs = () => {
             </div></Link>
             <Link href="product/newstyle"><div className="lg:w-1/4 md:w-1/3 p-4 w-full cursor-pointer shadow-lg">
               <a className="block relative  rounded overflow-hidden">
-                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/71djjJCF8PL._SL1364_.jpg" />
+                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/613vgWVbpbL._SL1024_.jpg" />
               </a>
               <div className="mt-4 text-center">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -62,7 +62,7 @@ const Mugs = () => {
             </div></Link>
             <Link href="product/newstyle"><div className="lg:w-1/4 md:w-1/3 p-4 w-full cursor-pointer shadow-lg">
               <a className="block relative  rounded overflow-hidden">
-                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/71djjJCF8PL._SL1364_.jpg" />
+                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/613vgWVbpbL._SL1024_.jpg" />
               </a>
               <div className="mt-4 text-center">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -74,7 +74,7 @@ const Mugs = () => {
             </div></Link>
             <Link href="product/newstyle"><div className="lg:w-1/4 md:w-1/3 p-4 w-full cursor-pointer shadow-lg">
               <a className="block relative  rounded overflow-hidden">
-                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/71djjJCF8PL._SL1364_.jpg" />
+                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/613vgWVbpbL._SL1024_.jpg" />
               </a>
               <div className="mt-4 text-center">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -87,7 +87,7 @@ const Mugs = () => {
             </div></Link>
             <Link href="product/newstyle"><div className="lg:w-1/4 md:w-1/3 p-4 w-full cursor-pointer shadow-lg">
               <a className="block relative  rounded overflow-hidden">
-                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/71djjJCF8PL._SL1364_.jpg" />
+                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/613vgWVbpbL._SL1024_.jpg" />
               </a>
               <div className="mt-4 text-center">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -99,7 +99,7 @@ const Mugs = () => {
             </div></Link>
             <Link href="product/newstyle"><div className="lg:w-1/4 md:w-1/3 p-4 w-full cursor-pointer shadow-lg">
               <a className="block relative  rounded overflow-hidden">
-                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/71djjJCF8PL._SL1364_.jpg" />
+                <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/613vgWVbpbL._SL1024_.jpg" />
               </a>
               <div className="mt-4 text-center">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
@@ -121,4 +121,4 @@ const Mugs = () => {
   )
 }
 
-export default Mugs
+export default Stickers

@@ -6,8 +6,8 @@ const Tshirts = () => {
      
      <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto">
-    <div className="flex flex-wrap -m-4">
-      <Link href="product/newstyle"><div className="lg:w-1/4 md:w-1/2 p-4 w-full cursor-pointer shadow-lg">
+    <div className="flex flex-wrap -m-4 justify-center text-center">
+      <Link href="product/newstyle"><div className="lg:w-1/4 md:w-1/2 p-4 w-full cursor-pointer  shadow-lg">
         <a className="block relative  rounded overflow-hidden">
           <img alt="ecommerce" className="h-[30vh] md:h-[36vh] block m-auto md:m-0" src="https://m.media-amazon.com/images/I/71O1QaI-sbL._UL1500_.jpg"/>
         </a>
