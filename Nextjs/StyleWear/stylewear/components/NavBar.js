@@ -32,8 +32,8 @@ console.log(cart,addtoCart,removeFromCart,clearCart,subTotal)
         <div onClick={toggleCart} className='cursor-pointer cart absolute right-0 mx-5 top-5'>
             <AiOutlineShoppingCart className=' text-xl md:text-3xl'/>
         </div>
-        <div ref={ref} className=` z-10 h-[100vh] w-72 sidecart absolute top-0 right-0 bg-purple-300 px-8 p-10 transform transition-transform translate-x-0 `>
-          <h2 className='font-bold text-xl text-center'>Shopping Cart</h2>
+        <div ref={ref} className={` z-10 h-[100vh] w-72 sidecart absolute top-0 right-0 bg-purple-300 px-8 p-10 transform transition-transform ${Object.keys(cart).length!==0?'translate-x-0':'translate-x-full'} `}>
+          <h2 className='font-bold text-xl text-center'>Shopping E Cart </h2>
           <span onClick={toggleCart} className='absolute top-2 right-2 cursor-pointer text-xl text-purple-500'><AiFillCloseCircle/></span>
           <ol className='list-decimal font-semibold'>
             {Object.keys(cart)==0 && <div className='mx-10 font-normal my-4'>No Items in the cart</div>}
