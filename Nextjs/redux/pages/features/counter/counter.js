@@ -19,6 +19,7 @@ const Counter = () => {
         <div>
             <button onClick={()=>dispatch(increment())}>+</button>
             <button onClick={()=>dispatch(decrement())}>-</button>
+            <button onClick={()=>dispatch(multiply())}>*</button>
         </div>
         <input type="text" value={incrementAmount} 
         onChange={(e)=>setIncrementAmount(e.target.value)}/>
