@@ -2,9 +2,9 @@ import {quotes,users} from './fakedb.js'
 import {randomBytes} from 'crypto'
 const resolvers = {
     Query:{
-        users:()=>users,
+        users:async ()=>await User.find(),
         user:(_,args)=>users.find(user=>user.id==args.id),
-        quotes:()=>quotes,
+        quotes:async ()=>await Quotes.find(),
         iquote:(_,args)=>quotes.filter(quote=>quote.by == args.by)
         
     },
