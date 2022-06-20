@@ -26,6 +26,22 @@ app.get('/greetings',function(req,res){
         username :req.session.username,
     });
 });
+app.get('/Alert',function(req,res){
+
+    res.render('about',{
+
+        message:'welcome',
+
+        style: req.query.style,
+
+        userid:req.cookies.userid,
+
+        username :req.session.username,
+
+    });
+
+});
+
 
 app.get('/no-layout',function(req,res){
     res.render('no-layout',{layout:null});
