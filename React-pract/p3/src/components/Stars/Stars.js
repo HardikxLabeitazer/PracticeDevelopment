@@ -18,10 +18,16 @@ const createArray = length =>[...Array(length)]
 //         </div>
 //     )
 // }
-function Stars({totalStars=5,selectedStars=0,onRate=f=>f}){
+
+
+
+
+function Stars({totalStars=10,selectedStars=1,onRate=f=>f}){
     return (
         <>
-        {createArray(totalStars).map((n,i)=>(
+        {
+                
+                createArray(totalStars).map((n,i)=>(
             <StarRating key={i} selected={selectedStars >i} onSelect={()=>onRate(i+1)}/>
         ))}
         
