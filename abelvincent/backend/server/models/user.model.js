@@ -24,6 +24,7 @@ const UserSchema = new mongoose.Schema({
         type:String,
         required:"Password is required"
     },
+    address:type:String,
     salt:String,
 })
 
