@@ -9,6 +9,7 @@ const quotesSchema = new mongoose.Schema({
        type:mongoose.Schema.Types.ObjectId,
        ref:"User"
     },
+    author:type:String 
    
 })
 
