@@ -18,7 +18,15 @@ export class ProductList extends Component {
                 {p.description}
             </div>
         </div>
-        
+<div className='card-text bg-white p-1'>
+
+                {p.description}
+
+            </div>
+
+        <div className='card-text bg-white p-1'>
+                {p.description}
+            </div>
         
         
         
